@@ -16,9 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     private FBReaderHelper fbReaderHelper;
 
-    private Button btn;
-
-//    private String path = Environment.getExternalStorageDirectory() + "/test.txt";
+    //    private String path = Environment.getExternalStorageDirectory() + "/test.txt";
 //    private String path2 = Environment.getExternalStorageDirectory() + "/test.mobi";
     private String path3 = Environment.getExternalStorageDirectory() + "/test.epub";
 
@@ -27,8 +25,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         fbReaderHelper = new FBReaderHelper(this);
-        btn = findViewById(R.id.btn);
-        btn.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //必须确保activity有绑定服务才能通过jni获取书本信息
