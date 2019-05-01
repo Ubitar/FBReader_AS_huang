@@ -9,6 +9,7 @@
 3. 参考MainActivity类中的 FBReader打开方式.
 
 效果如下：
+
 ![](https://github.com/Ubitar/FBReader_AS_huang/blob/master/screenshot/screen1.png)
 ![](https://github.com/Ubitar/FBReader_AS_huang/blob/master/screenshot/screen2.png)
 
