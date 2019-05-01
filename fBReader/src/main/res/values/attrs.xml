@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ZoomView">
+        <attr name="zoom" format="float"></attr>
+        <attr name="maxZoom" format="float"></attr>
+        <attr name="smoothZoom" format="float"></attr>
+        <attr name="doubleClickAble" format="boolean"></attr>
+        <attr name="zoomAble" format="boolean"></attr>
+    </declare-styleable>
+</resources>

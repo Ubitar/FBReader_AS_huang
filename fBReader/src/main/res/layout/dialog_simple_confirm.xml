@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="270dp"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="11.4dp"
+        android:paddingLeft="14.7dp"
+        android:paddingRight="14.7dp"
+        android:paddingTop="13.9dp"
+        android:textColor="#555555"
+        android:visibility="gone"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/txtContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="24dp"
+        android:paddingLeft="14.7dp"
+        android:paddingRight="14.7dp"
+        android:paddingTop="24dp"
+        android:text="请输入警告的内容"
+        android:textColor="#555555"
+        android:visibility="gone"
+        android:textSize="12.1sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#e0e0e0"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCancel"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="51dp"
+            android:layout_weight="1"
+            android:text="取消"
+            android:background="@null"
+            android:textColor="#555555"
+            android:textSize="12.1dp" />
+
+        <View
+            android:id="@+id/viewSep"
+            android:layout_width="1px"
+            android:layout_height="28dp"
+            android:background="#e0e0e0"></View>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="51dp"
+            android:layout_weight="1"
+            android:text="确定"
+            android:background="@android:color/white"
+            android:textColor="#555555"
+            android:textSize="12.1dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

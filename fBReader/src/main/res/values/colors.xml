@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <item name="primary" type="color">#444444</item>
+  <item name="primary_dark" type="color">#222222</item>
+  <color name="afc_border_line_dark">#33B5E5</color>
+  <color name="black">#000000</color>
+  <color name="white">#FFFFFF</color>
+  <color name="dark_gray">#333333</color>
+  <color name="light_gray">#AFFFFFFF</color>
+</resources>

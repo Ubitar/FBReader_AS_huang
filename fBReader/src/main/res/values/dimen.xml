@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<dimen name="ambilwarna_hsvHeight">240dp</dimen>
+	<dimen name="ambilwarna_hsvWidth">240dp</dimen>
+	<dimen name="ambilwarna_hueWidth">30dp</dimen>
+	<dimen name="ambilwarna_spacer">8dp</dimen>
+
+	<dimen name="toast_hover">64dp</dimen>
+	<dimen name="buttontoast_hover">24dp</dimen>
+	<dimen name="buttontoast_x_padding">12dp</dimen>
+	<dimen name="cardtoast_margin">4dp</dimen>
+</resources>
