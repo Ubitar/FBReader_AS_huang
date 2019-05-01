@@ -6,7 +6,9 @@
 使用方法：
 1. 导入项目中的fBReader库到你的项目下。
 2. 参考app库中的Application类，设置 FBReaderIntents.DEFAULT_PACKAGE 的包名为你的项目的applicationId。
-3. 参考MainActivity类中的 FBReader打开方式.
+3. 在你的Application类中添加
+    FBReaderApplication.init(this);
+4. 参考MainActivity类中的 FBReader打开方式.
 
 效果如下：
 
