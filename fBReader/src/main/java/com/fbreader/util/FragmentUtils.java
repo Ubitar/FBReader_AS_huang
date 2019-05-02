@@ -1,4 +1,4 @@
-package com.fbreader;
+package com.fbreader.util;
 
 import android.graphics.drawable.Drawable;
 import android.os.Build;

@@ -1,4 +1,4 @@
-package com.fbreader;
+package com.fbreader.view.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;

@@ -1,4 +1,4 @@
-package com.fbreader;
+package com.fbreader.view.adapter;
 
 import android.support.annotation.Nullable;
 

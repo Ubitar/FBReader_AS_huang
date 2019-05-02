@@ -1,4 +1,4 @@
-package com.fbreader;
+package com.fbreader.view.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -11,6 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.fbreader.common.FBReaderHelper;
+import com.fbreader.common.IRefresh;
+import com.fbreader.view.adapter.MarkersAdapter;
 
 import org.geometerplus.fbreader.book.Book;
 import org.geometerplus.fbreader.book.BookEvent;

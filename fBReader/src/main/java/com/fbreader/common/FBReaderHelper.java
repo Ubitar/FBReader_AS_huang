@@ -1,4 +1,4 @@
-package com.fbreader;
+package com.fbreader.common;
 
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
@@ -72,6 +72,19 @@ public class FBReaderHelper {
         final PluginCollection pluginCollection = PluginCollection.Instance(myFBReaderApp.SystemInfo);
         try {
             return BookUtil.getPlugin(pluginCollection, book);
+        } catch (BookReadingException e) {
+            return null;
+        }
+    }
+
+    /**
+     * 获取BookModel
+     * @param book
+     * @return
+     */
+    public BookModel createBookModel(Book book) {
+        try {
+            return BookModel.createModel(book, getFormatPlugin(book));
         } catch (BookReadingException e) {
             return null;
         }

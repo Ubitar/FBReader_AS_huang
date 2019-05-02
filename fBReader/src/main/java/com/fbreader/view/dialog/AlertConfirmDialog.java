@@ -1,4 +1,4 @@
-package com.fbreader;
+package com.fbreader.view.dialog;
 
 import android.app.Dialog;
 import android.content.Context;

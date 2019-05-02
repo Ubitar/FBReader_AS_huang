@@ -1,4 +1,4 @@
-package com.fbreader;
+package com.fbreader.util;
 
 import org.geometerplus.fbreader.bookmodel.BookModel;
 import org.geometerplus.fbreader.bookmodel.TOCTree;

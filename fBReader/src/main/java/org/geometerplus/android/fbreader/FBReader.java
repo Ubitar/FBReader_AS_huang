@@ -18,11 +18,11 @@ import android.view.Menu;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
 
-import com.fbreader.FragmentUtils;
-import com.fbreader.IntentKey;
-import com.fbreader.MarkerFragment;
-import com.fbreader.MenuFragment;
-import com.fbreader.TOCFragment;
+import com.fbreader.util.FragmentUtils;
+import com.fbreader.common.IntentKey;
+import com.fbreader.view.fragment.MarkerFragment;
+import com.fbreader.view.fragment.MenuFragment;
+import com.fbreader.view.fragment.TOCFragment;
 
 import org.geometerplus.android.fbreader.api.ApiListener;
 import org.geometerplus.android.fbreader.api.ApiServerImplementation;

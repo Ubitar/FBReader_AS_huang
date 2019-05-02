@@ -3,7 +3,7 @@
 - 添加菜单界面
 - 添加右侧目录和标签栏
 
-[我的FBReader简书文章](https://www.jianshu.com/p/676cc82f21d7 "我的FBReader简书文章")
+[我的FBReader简书文章](https://www.jianshu.com/p/3d9b80235efc "我的FBReader简书文章")
 
 使用方法：
 1. 导入项目中的fBReader库到你的项目下。

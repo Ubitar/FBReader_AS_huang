@@ -19,7 +19,7 @@
 
 package org.geometerplus.fbreader.bookmodel;
 
-import com.fbreader.TxtCatalogsUtil;
+import com.fbreader.util.TxtCatalogsUtil;
 
 import java.util.*;
 

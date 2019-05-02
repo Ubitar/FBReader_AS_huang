@@ -1,4 +1,4 @@
-package com.fbreader;
+package com.fbreader.view.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,6 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.fbreader.common.FBReaderHelper;
+import com.fbreader.view.adapter.FragmentViewPagerAdapter;
+import com.fbreader.common.IRefresh;
+import com.fbreader.common.SimpleTabEntry;
 import com.flyco.tablayout.CommonTabLayout;
 import com.flyco.tablayout.listener.OnTabSelectListener;
 
@@ -64,8 +68,8 @@ public class TOCFragment extends Fragment implements IRefresh {
     @Override
     public void refresh() {
         if (adapter != null)
-            for (int i = 0, size = adapter.fragments.size(); i < size; i++) {
-                IRefresh iRefresh = (IRefresh) adapter.fragments.get(i);
+            for (int i = 0, size = adapter.getFragments().size(); i < size; i++) {
+                IRefresh iRefresh = (IRefresh) adapter.getFragments().get(i);
                 iRefresh.refresh();
             }
     }

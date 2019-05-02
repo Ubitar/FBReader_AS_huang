@@ -1,4 +1,4 @@
-package com.fbreader;
+package com.fbreader.common;
 
 public class IntentKey {
 

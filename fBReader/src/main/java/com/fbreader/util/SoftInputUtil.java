@@ -1,4 +1,4 @@
-package com.fbreader;
+package com.fbreader.util;
 
 import android.app.Activity;
 import android.content.Context;

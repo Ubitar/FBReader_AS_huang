@@ -1,4 +1,4 @@
-package com.fbreader;
+package com.fbreader.view.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +14,8 @@ import android.widget.RadioButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.fbreader.common.FBReaderHelper;
 
 import org.geometerplus.android.fbreader.library.LibraryActivity;
 import org.geometerplus.fbreader.fbreader.ActionCode;

@@ -1,6 +1,5 @@
-package com.fbreader;
+package com.fbreader.view.fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -12,6 +11,11 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.fbreader.common.FBReaderHelper;
+import com.fbreader.common.IntentKey;
+import com.fbreader.util.SoftInputUtil;
+import com.fbreader.view.dialog.AlertConfirmDialog;
 
 import org.geometerplus.fbreader.book.Bookmark;
 import org.geometerplus.fbreader.fbreader.ActionCode;
