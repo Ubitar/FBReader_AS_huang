@@ -528,7 +528,7 @@ public class FBReaderHelper {
     }
 
     /**
-     * 获取当前页的字数量   应该先确定Collection是否已经绑定服务且已打开书本
+     * 获取当前页的字数量   应该先确定Collection是否已经绑定服务
      *
      * @return
      */
@@ -537,8 +537,11 @@ public class FBReaderHelper {
         ZLTextWordCursor edCursor = getEndCursor();
         if (myFBReaderApp.Model == null || edCursor.getParagraphIndex() <= 0)
             return edCursor.getElementIndex();
-        return myFBReaderApp.Model.getTextModel().getTextLength(edCursor.getParagraphIndex() - 1) + edCursor.getElementIndex() -
-                myFBReaderApp.Model.getTextModel().getTextLength(stCursor.getParagraphIndex()) + stCursor.getElementIndex();
+        int pageCount = myFBReaderApp.Model.getTextModel().getTextLength(edCursor.getParagraphIndex() - 1) -
+                myFBReaderApp.Model.getTextModel().getTextLength(stCursor.getParagraphIndex() - 1);
+        pageCount += edCursor.getElementIndex();
+        pageCount -= stCursor.getElementIndex();
+        return pageCount;
     }
 
     public Book getCurrentBook() {
