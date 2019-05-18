@@ -9,7 +9,8 @@ public class App extends Application {
 
     static {
         //这里需要自己设置自己 build.gradle 里的  applicationId 到DEFAULT_PACKAGE字段
-        FBReaderIntents.DEFAULT_PACKAGE = "你应用的applicationId";
+        FBReaderIntents.DEFAULT_PACKAGE = "com.fbreaderc.sample";
+//        FBReaderIntents.DEFAULT_PACKAGE = "你应用的applicationId";
     }
 
     @Override

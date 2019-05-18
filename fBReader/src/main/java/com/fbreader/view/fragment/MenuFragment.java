@@ -31,6 +31,7 @@ import org.geometerplus.zlibrary.ui.android.R;
 public class MenuFragment extends Fragment {
 
     private ImageView imgBack;
+    private TextView txtSearch;
     private TextView txtCatalogs;
     private TextView txtToLibrary;
     private View layoutEmpty;
@@ -60,6 +61,7 @@ public class MenuFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_menu, container, false);
         imgBack = root.findViewById(R.id.imgBack);
+        txtSearch = root.findViewById(R.id.txtSearch);
         txtCatalogs = root.findViewById(R.id.txtCatalogs);
         txtToLibrary=root.findViewById(R.id.txtToLibrary);
         layoutEmpty = root.findViewById(R.id.layoutEmpty);
@@ -99,6 +101,13 @@ public class MenuFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 FBReaderApp.Instance().closeWindow();
+            }
+        });
+        txtSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ZLApplication.Instance().runAction(ActionCode.SEARCH);
+                ZLApplication.Instance().runAction(ActionCode.HIDE_MENU);
             }
         });
         txtCatalogs.setOnClickListener(new View.OnClickListener() {

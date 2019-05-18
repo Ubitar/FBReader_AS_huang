@@ -597,18 +597,18 @@ public class FBReader extends FBReaderMainActivity implements ZLApplicationWindo
     public boolean onSearchRequested() {
         final FBReaderApp.PopupPanel popup = myFBReaderApp.getActivePopup();
         myFBReaderApp.hideActivePopup();
-        if (DeviceType.Instance().hasStandardSearchDialog()) {
-            final SearchManager manager = (SearchManager) getSystemService(SEARCH_SERVICE);
-            manager.setOnCancelListener(new SearchManager.OnCancelListener() {
-                public void onCancel() {
-                    if (popup != null) {
-                        myFBReaderApp.showPopup(popup.getId());
-                    }
-                    manager.setOnCancelListener(null);
-                }
-            });
-            startSearch(myFBReaderApp.MiscOptions.TextSearchPattern.getValue(), true, null, false);
-        } else {
+//        if (DeviceType.Instance().hasStandardSearchDialog()) {
+//            final SearchManager manager = (SearchManager) getSystemService(SEARCH_SERVICE);
+//            manager.setOnCancelListener(new SearchManager.OnCancelListener() {
+//                public void onCancel() {
+//                    if (popup != null) {
+//                        myFBReaderApp.showPopup(popup.getId());
+//                    }
+//                    manager.setOnCancelListener(null);
+//                }
+//            });
+//            startSearch(myFBReaderApp.MiscOptions.TextSearchPattern.getValue(), true, null, false);
+//        } else {
             SearchDialogUtil.showDialog(
                     this, FBReader.class, myFBReaderApp.MiscOptions.TextSearchPattern.getValue(), new DialogInterface.OnCancelListener() {
                         @Override
@@ -619,7 +619,7 @@ public class FBReader extends FBReaderMainActivity implements ZLApplicationWindo
                         }
                     }
             );
-        }
+//        }
         return true;
     }
 

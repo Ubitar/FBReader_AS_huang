@@ -25,6 +25,16 @@
             android:layout_weight="1"></View>
 
         <TextView
+            android:id="@+id/txtSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="搜索"
+            android:textColor="@android:color/white"
+            android:textSize="14dp" />
+        <TextView
             android:id="@+id/txtCatalogs"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
