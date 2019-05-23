@@ -46,6 +46,7 @@ import org.geometerplus.fbreader.bookmodel.BookModel;
 import org.geometerplus.fbreader.fbreader.ActionCode;
 import org.geometerplus.fbreader.fbreader.DictionaryHighlighting;
 import org.geometerplus.fbreader.fbreader.FBReaderApp;
+import org.geometerplus.fbreader.fbreader.TurnPageAction;
 import org.geometerplus.fbreader.fbreader.options.CancelMenuHelper;
 import org.geometerplus.fbreader.formats.ExternalFormatPlugin;
 import org.geometerplus.fbreader.formats.PluginCollection;
@@ -259,6 +260,9 @@ public class FBReader extends FBReaderMainActivity implements ZLApplicationWindo
         myFBReaderApp.addAction(ActionCode.HIDE_TOC, new HideTOCAction(this, myFBReaderApp));
         myFBReaderApp.addAction(ActionCode.SHOW_NAVIGATION, new ShowNavigationAction(this, myFBReaderApp));
         myFBReaderApp.addAction(ActionCode.SEARCH, new SearchAction(this, myFBReaderApp));
+
+        myFBReaderApp.addAction(ActionCode.TURN_PAGE_FORWARD, new TurnPageAction(this, myFBReaderApp, true));
+        myFBReaderApp.addAction(ActionCode.TURN_PAGE_BACK, new TurnPageAction(this, myFBReaderApp, false));
 
         myFBReaderApp.addAction(ActionCode.SELECTION_SHOW_PANEL, new SelectionShowPanelAction(this, myFBReaderApp));
         myFBReaderApp.addAction(ActionCode.SELECTION_HIDE_PANEL, new SelectionHidePanelAction(this, myFBReaderApp));
@@ -609,16 +613,16 @@ public class FBReader extends FBReaderMainActivity implements ZLApplicationWindo
 //            });
 //            startSearch(myFBReaderApp.MiscOptions.TextSearchPattern.getValue(), true, null, false);
 //        } else {
-            SearchDialogUtil.showDialog(
-                    this, FBReader.class, myFBReaderApp.MiscOptions.TextSearchPattern.getValue(), new DialogInterface.OnCancelListener() {
-                        @Override
-                        public void onCancel(DialogInterface di) {
-                            if (popup != null) {
-                                myFBReaderApp.showPopup(popup.getId());
-                            }
+        SearchDialogUtil.showDialog(
+                this, FBReader.class, myFBReaderApp.MiscOptions.TextSearchPattern.getValue(), new DialogInterface.OnCancelListener() {
+                    @Override
+                    public void onCancel(DialogInterface di) {
+                        if (popup != null) {
+                            myFBReaderApp.showPopup(popup.getId());
                         }
                     }
-            );
+                }
+        );
 //        }
         return true;
     }
@@ -915,6 +919,19 @@ public class FBReader extends FBReaderMainActivity implements ZLApplicationWindo
     public void hideMarker() {
         FragmentUtils.hide(markerFragment);
         fullscreen(true);
+    }
+
+    public boolean onTurnBackIntercept(boolean isForward) {
+        if (isForward && myFBReaderApp.BookTextView.getEndCursor().getParagraphCursor().isEndOfSection()) {
+            //TODO   准备翻到下一章的拦截如果需要拦截返回true
+            return false;
+        }
+        return false;
+    }
+
+
+    public FBReader getActivity() {
+        return this;
     }
 
 }
