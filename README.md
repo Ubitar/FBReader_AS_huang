@@ -14,7 +14,7 @@
     FBReaderApplication.init(this);
 5. 参考MainActivity类中的 FBReader打开方式.
 
-####如果靓仔靓女你觉得可以，给个star谢谢
+#### 如果靓仔靓女你觉得可以，给个star谢谢
 
 效果如下：
 
